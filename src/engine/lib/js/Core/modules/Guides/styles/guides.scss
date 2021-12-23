@@ -1,0 +1,145 @@
+@import "../../../../../sass/engine.scss";
+
+.guides {
+  display: "block";
+  cursor: grab;
+  pointer-events: all;
+
+  &:hover {
+    cursor: grab;
+    pointer-events: all;
+  }
+}
+
+.guides_pseudoEL {
+  position: absolute;
+  content: "";
+  z-index: 10000;
+  display: inline-block;
+  height: 0;
+  width: 0;
+  display: block;
+  cursor: hand;
+}
+
+.UI_guides__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #34495e;
+  position: fixed;
+  width: 100px;
+  height: 50px;
+  bottom: 0;
+  right: 0;
+  border-top-left-radius: 5px;
+  padding: 0 1em;
+
+  label {
+    color: white;
+    font-size: 0.75em;
+    margin: 0 1em 0 0;
+  }
+
+  input {
+    border-radius: 0;
+    background: transparent;
+    width: 30px;
+    padding: 0 8px;
+    text-align: center;
+    background-color: white;
+    border: 1px solid black;
+    border-radius: $softRadius;
+    pointer-events: all;
+  }
+}
+
+.contextMenu {
+  position: fixed;
+  border-radius: 3px;
+  border: 1px solid black;
+  background: white;
+  z-index: 100000;
+  pointer-events: all;
+  cursor: grab;
+
+  header {
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    background: rgb(59, 69, 99);
+    padding: 0.25em 0.5em 0.5em;
+    display: flex;
+    box-sizing: border-box;
+    cursor: grab;
+
+    label {
+      color: white;
+      font-size: 1em;
+      margin-left: 0.5em;
+      cursor: grab;
+    }
+
+    .close_contextMenu {
+      width: 17px;
+      height: 17px;
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: space-between;
+      cursor: pointer;
+
+      margin-right: 0.25em;
+
+      & span:nth-child(1n) {
+        transform: rotate(45deg);
+        top: 7px;
+        left: 1px;
+      }
+      & span:nth-child(2n) {
+        transform: rotate(-45deg);
+        top: 7px;
+        right: 1px;
+      }
+
+      .cross {
+        width: 15px;
+        height: 3px;
+        background: black;
+        position: absolute;
+        transform-origin: center;
+        content: " ";
+        background: white;
+      }
+    }
+  }
+
+  &_content {
+    padding: 0.5em 0.5em 0.5em 0.5em;
+  }
+
+  &_blocInput {
+    @include flex(row, wrap, space-between, center);
+
+    label {
+      margin: 0 0 0 1.5em;
+    }
+
+    input {
+      flex: 1;
+      text-align: center;
+    }
+
+    & [type="number"] {
+      text-indent: 0.875em;
+    }
+
+    svg {
+      @include size(1.5em, 1.5em);
+    }
+  }
+
+  hr {
+    margin: 0.5rem 0;
+  }
+}

@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="favicon.ico" />
+    <link href="css/reset.scss" rel="stylesheet" />
+    <link href="css/typo.scss" rel="stylesheet" />
+    <link href="css/demo.scss" rel="stylesheet" />
+    <script src="./engine/lib/index.js" type="module" defer></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,500;0,700;0,900;1,100;1,300;1,500;1,700;1,900&family=Roboto:ital,wght@0,100;0,500;0,700;0,900;1,100;1,300;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Tools integration</title>
+  </head>
+  <body>
+    <header>
+      <div class="circle">
+        <div class="logo"></div>
+        <div class="text">
+          <p>Raphaël Parodi - Front end - React/JS.</p>
+        </div>
+      </div>
+
+      <div class="hero">
+        <span>
+          <h1>Guides.js</h1>
+          <p>From Scratch</p>
+        </span>
+      </div>
+
+      <div class="hero_back">
+        <span>
+          <h1>Guides.js</h1>
+          <p>Tools for front-end developers</p>
+        </span>
+      </div>
+      <div class="header_inside"></div>
+    </header>
+    <main>
+      
+      <section>
+        <header>
+          <h2>Facilitate your integration work</h2>
+        </header>
+        <p>
+          <b>Guide.js</b> is the first tool in a series of four. This will allow the
+          front-end developer to improve their <b>working comfort and productivity</b>.
+        </p>
+
+        <p>
+          Guide.js allows you to insert guides to change their thickness and
+          color in order to easily align the elements of your page. This feature
+          is directly inspired by the one that can be found in Photoshop, with
+          some improvements. ^^
+        </p>
+
+        <p>
+          The project is completely from scratch and has no dependencies. And it
+          will be the same for the next modules.
+        </p>
+      </section>
+      <hr />
+      <section>
+        <h2>How to use ?</h2>
+
+        <ul>
+          <li>
+            You can simultaneously press <b>ctrl and shift</b> to show or hide
+            the interface guides.
+          </li>
+
+          <li>
+            Use <b>ctrl</b> or <b>shift</b> key and <b>left click</b> in the
+            page to add a <b>horizontal</b> or <b>vertical</b> Guides.
+          </li>
+
+          <li>You can <b>drag and drop</b> the Guides</li>
+          <li>
+            if you <b>right click</b> on a guide. This will open a
+            <b>submenu</b> that will allow you to:
+            <ul>
+              <li>Delete a guide</li>
+              <li>Change thickness of a guide</li>
+              <li>Change the color of all guides</li>
+            </ul>
+          </li>
+
+          <li>
+            You can directly modify the position of a Guides using the inteface
+            at the bottom right of the screen, either by directly changing the
+            value, or by using the up or down arrows.
+          </li>
+        </ul>
+      </section>
+
+      <hr />
+
+      <section class="demo_alignement">
+        <h2>Try it</h2>
+
+        <p>Give it a try, checking if the images are aligned.</p>
+
+        <div>
+          <p>
+            <img
+              src="http://placeimg.com/290/300/tech"
+              alt="placeholder image"
+            />
+          </p>
+          <p>
+            <img
+              src="http://placeimg.com/580/300/animals"
+              alt="placeholder image"
+            />
+          </p>
+          <p>
+            <img
+              src="http://placeimg.com/420/300/arch"
+              alt="placeholder image"
+            />
+          </p>
+          <p>
+            <img
+              src="http://placeimg.com/460/300/people"
+              alt="placeholder image"
+            />
+          </p>
+          <p>
+            <img
+              src="http://placeimg.com/460/300/grayscale"
+              alt="placeholder image"
+            />
+          </p>
+          <p>
+            <img
+              src="http://placeimg.com/432/300/sepia"
+              alt="placeholder image"
+            />
+          </p>
+        </div>
+      </section>
+
+      <hr />
+
+      <section class="demo_alignement">
+        <h2>Features of code</h2>
+
+        <p>Features inspired by guides found in Photoshop</p>
+
+        <ul>
+          <li>Form Scratch ^^</li>
+          <li>No dependencies</li>
+          <li>POO</li>
+          <li>Sass</li>
+          <li>Magic function to create HTML elements from a string</li>
+          <li>Dynamical CSS from scratch</li>
+          <li>Custom Context Menu</li>
+          <li>Drag an drop UI</li>
+          <li>Local Storage</li>
+        </ul>
+      </section>
+    </main>
+    <div class="social_icon--content">
+      <a
+        href="https://www.linkedin.com/in/raphael-parodi-a942ab1b0/"
+        target="_blank"
+        alt="guide.js"
+        alt="My Linkedin profil"
+      ></a>
+      <a
+      href="https://inexpensive-chipmunk-220.notion.site/Hard-Skills-Soft-Skills-88964160557a441f9608d75c711ff06b"
+      target="_blank"
+      alt="My profil in Notion"
+    ></a>
+      <a
+        href="https://github.com/raficraft/integration-tools"
+        target="_blank"
+        alt="Github repositories of this project"
+      ></a>
+     
+      <a
+        href="https://inexpensive-chipmunk-220.notion.site/Hard-Skills-Soft-Skills-88964160557a441f9608d75c711ff06b"
+        target="_blank"
+        alt="My profil in Notion"
+      ></a>
+    </div>
+    <script>
+      const text = document.querySelector(".text p");
+      text.innerHTML = text.innerText
+        .split("")
+        .map(
+          (char, i) =>
+            `<span style="transform:rotate(${i * 9.5}deg)">${char}</span>`
+        )
+        .join("");
+    </script>
+  </body>
+</html>

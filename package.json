@@ -1,0 +1,26 @@
+{
+  "name": "parcel_starter",
+  "version": "1.0.0",
+  "description": "",
+  "source": "src/index.html",
+  "browserslist": "> 0.5%, last 2 versions, not dead",
+  "author": "",
+  "license": "ISC",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "parcel -p 8000",
+    "build": "parcel build --no-optimize ./src/index.html"
+  },
+  "devDependencies": {
+    "@parcel/babel-plugin-transform-runtime": "^2.0.1",
+    "@parcel/babel-preset-env": "^2.0.1",
+    "@parcel/transformer-sass": "^2.0.1",
+    "autoprefixer": "^10.4.0",
+    "css-mqpacker": "^7.0.0",
+    "node-sass": "^7.0.0",
+    "parcel": "^2.0.1",
+    "postcss": "^8.4.5",
+    "postcss-modules": "^4.2.2",
+    "postcss-nested": "^5.0.6"
+  }
+}

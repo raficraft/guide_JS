@@ -1,0 +1,230 @@
+@import "./../engine/lib/sass/engine.scss";
+
+body {
+  @include flex(column, row, space-between, center);
+  //background-image: url("./../assets/bg/paper_fibers.png");
+
+  & > header {
+    width: 100%;
+    height: 66vh;
+    @include flex(row, wrap, center, center);
+    position: relative;
+    filter: drop-shadow(-1px 48px 20px rgb(82, 79, 71));
+
+    .hero,
+    .hero_back {
+      @include fullAbsolute();
+      @include flex(row, wrap, center, center);
+      span {
+        position: relative;
+      }
+      h1 {
+        font-size: 16rem;
+        letter-spacing: 1.5rem;
+        transform: rotate(-9deg);
+      }
+      p {
+        position: absolute;
+        bottom: -4rem;
+        left: 6rem;
+        transform: rotate(-9deg);
+        font-size: 2rem;
+        line-height: 2rem;
+        color: rgba(165, 30, 0, 0.95);
+        font-family: "Poppins, sans-serif";
+      }
+    }
+
+    .hero {
+      z-index: 10;
+      clip-path: polygon(0 0, 100% 0, 100% 28%, 0 81%);
+      background-color: rgba(17, 17, 17, 0.95);
+
+      h1 {
+        color: rgb(255, 255, 255);
+      }
+    }
+    .hero_back {
+      z-index: 0;
+      h1 {
+        color: rgba(165, 30, 0, 0.95);
+      }
+    }
+  }
+
+  hr {
+    background-color: rgb(165, 165, 165);
+    height: 1px;
+    border: none;
+  }
+
+  main {
+    width: 1024px;
+    min-height: 100vh;
+    h2 {
+      font-size: 2.5rem;
+      font-weight: bold;
+      margin: 0 0 1.5rem 0;
+      font-family: "Roboto", sans-serif;
+    }
+    ul {
+      width: 90%;
+      margin: 2rem auto 0;
+      li {
+        margin-bottom: 1rem;
+      }
+      ul {
+        margin: 1rem 2rem 2rem;
+        li {
+          list-style: circle;
+          margin-bottom: 1rem;
+        }
+      }
+    }
+
+    li {
+      line-height: 1.25rem;
+      font-size: 1.25rem;
+    }
+  }
+
+  .social_icon--content {
+    position: fixed;
+    bottom: 2rem;
+    left: 2rem;
+    @include flex(row, wrap, center, center);
+
+    a {
+      @include size(2.5rem, 2.5rem);
+      margin: 0 1rem;
+      @include circle();
+      @include flex(row, wrap, center, center);
+      background-size: 2.5rem;
+      filter: drop-shadow(3px 4px 2px rgb(129, 129, 129));
+
+      content: "";
+      background-repeat: no-repeat;
+      background-position: center;
+      transition: $softTransition;
+      &:hover {
+        transform: scale(1.2);
+      }
+      &:nth-child(1) {
+        background-image: url("./../assets/icon/linkedin.png");
+      }
+      &:nth-child(3) {
+        background-image: url("./../assets/icon/github.png");
+      }
+      &:nth-child(2) {
+        background-image: url("./../assets/icon/notion.png");
+        border-radius: 0px;
+      }
+      &:nth-child(4) {
+        background-image: url("./../assets/icon/npm.png");
+        border-radius: 0px;
+        @include size(5rem, 5rem);
+        object-fit: cover;
+        background-size: 80px 32px;
+        margin-top: 0.25rem;
+      }
+    }
+  }
+
+  section {
+    margin: 2rem 0;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    p {
+      margin: 0 0 1rem 0;
+      line-height: 1.5rem;
+      font-size: 1.25rem;
+      color: rgb(114, 114, 114);
+    }
+
+    h2 {
+      color: rgb(48, 48, 48);
+    }
+  }
+
+  section.demo_alignement {
+    position: relative;
+    div {
+      margin: 2rem 0 0 0;
+      @include flex(row, wrap, space-between, center);
+      img {
+        border: 1rem solid rgb(255, 255, 255);
+        box-shadow: 0px 0px 10px 8px rgb(167, 167, 167);
+        margin-bottom: 2rem;
+        border-radius: $softRadius;
+      }
+
+      p:nth-child(1) {
+        margin-top: 2rem;
+        position: absolute;
+        top: 6.85rem;
+        right: 0.25rem;
+      }
+
+      p:nth-child(5) {
+        margin-top: 2rem;
+        position: absolute;
+        bottom: -0.25rem;
+        right: -0.6rem;
+      }
+    }
+  }
+
+  $size_logo: 12rem;
+
+  .circle {
+    position: absolute;
+    top: 3rem;
+    left: 2rem;
+    z-index: 100;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include size(12rem, 12rem);
+
+    .logo {
+      content: "";
+      @include size(9rem, 9rem);
+      background-image: url("./../assets/logo/R.jpg");
+      background-size: cover;
+      @include circle();
+      transform: rotate(-15deg);
+      filter: brightness(1.5) contrast(1.5);
+    }
+    .text {
+      color: white;
+      position: absolute;
+      @include size(100%, 100%);
+      top: 0rem;
+      animation: rotateText 10s linear infinite;
+      & span {
+        position: absolute;
+        left: 50%;
+        font-size: 1rem;
+        transform-origin: 0 6rem;
+      }
+    }
+  }
+
+  .header_inside {
+    clip-path: polygon(0 0, 100% 0, 100% 28%, 0 81%);
+    background-color: rgba(49, 47, 47, 0.95);
+    position: absolute;
+    z-index: -100;
+    content: "";
+    width: inherit;
+    height: inherit;
+    top: 16px;
+  }
+
+  @keyframes rotateText {
+    0% {
+      transform: rotate(-360deg);
+    }
+  }
+}

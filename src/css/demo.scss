@@ -22,6 +22,7 @@ body {
         font-size: 16rem;
         letter-spacing: 1.5rem;
         transform: rotate(-9deg);
+        font-family: "Roboto Condensed", sans-serif;
       }
       p {
         position: absolute;
@@ -31,7 +32,7 @@ body {
         font-size: 2rem;
         line-height: 2rem;
         color: rgba(165, 30, 0, 1);
-        font-family: "Poppins, sans-serif";
+        font-family: "Pridi", serif;
       }
     }
 
@@ -65,13 +66,13 @@ body {
       font-size: 2.5rem;
       font-weight: bold;
       margin: 0 0 1.5rem 0;
-      font-family: "Roboto", sans-serif;
     }
     ul {
       width: 90%;
       margin: 2rem auto 0;
       li {
         margin-bottom: 1rem;
+        list-style: disc;
       }
       ul {
         margin: 1rem 2rem 2rem;
@@ -83,8 +84,10 @@ body {
     }
 
     li {
-      line-height: 1.25rem;
-      font-size: 1.25rem;
+      line-height: 1.5rem;
+      font-size: 1.125rem;
+      font-family: "Pridi", serif;
+      font-weight: 300;
     }
   }
 
@@ -138,8 +141,10 @@ body {
     p {
       margin: 0 0 1rem 0;
       line-height: 1.5rem;
-      font-size: 1.25rem;
+      font-size: 1.125rem;
       color: rgb(114, 114, 114);
+      font-family: "Pridi", serif;
+      font-weight: 300;
     }
 
     h2 {
@@ -220,6 +225,18 @@ body {
     width: inherit;
     height: inherit;
     top: 16px;
+  }
+
+  .features_content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-start;
+    ul {
+      width: 40%;
+      margin: 1rem 0;
+      list-style: disc;
+    }
   }
 
   @keyframes rotateText {

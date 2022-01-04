@@ -141,9 +141,10 @@ body {
   .social_icon--content {
     position: fixed;
     bottom: 0;
-    left: 2rem;
+    left: 0;
+    padding: 0 2rem;
     @include flex(row, wrap, center, center);
-
+    background-color: rgb(255, 255, 255, 0.8);
     a {
       @include size($size_icon, $size_icon);
       margin: 0 1rem;

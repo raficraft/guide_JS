@@ -101,7 +101,15 @@ $base-font-size: 16px !default;
 @mixin min-width($threshold) {
   // We're calling another function (scut-rem) to convert pixels to rem units.
   // We'll cover that in the next section.
-  @media screen and (min-width: rem($threshold)) {
+  @media screen and (min-width: $threshold) {
+    @content;
+  }
+}
+
+@mixin max-width($threshold) {
+  // We're calling another function (scut-rem) to convert pixels to rem units.
+  // We'll cover that in the next section.
+  @media screen and (max-width: $threshold) {
     @content;
   }
 }

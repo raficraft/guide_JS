@@ -23,6 +23,9 @@ body {
         letter-spacing: 1.5rem;
         transform: rotate(-9deg);
         font-family: "Roboto Condensed", sans-serif;
+        @include max-width(1439px) {
+          font-size: 12rem;
+        }
       }
       p {
         position: absolute;
@@ -33,13 +36,29 @@ body {
         line-height: 2rem;
         color: rgba(165, 30, 0, 1);
         font-family: "Pridi", serif;
+        @include max-width(1439px) {
+          bottom: -3rem;
+        }
       }
     }
 
     .hero {
       z-index: 10;
-      clip-path: polygon(0 0, 100% 0, 100% 28%, 0 81%);
+      clip-path: polygon(0 0, 100% 0, 100% 30%, 0 79%);
       background-color: rgba(17, 17, 17, 1);
+
+      @include max-width(1900px) {
+        clip-path: polygon(0 0, 100% 0, 100% 35%, 0 76%);
+      }
+      @include max-width(1439px) {
+        clip-path: polygon(0 0, 100% 0, 100% 39%, 0 68%);
+      }
+      @include max-width(1028px) {
+        clip-path: polygon(0 0, 100% 0, 100% 39%, 0 68%);
+      }
+      @include max-width(769px) {
+        clip-path: polygon(0 0, 100% 0, 100% 39%, 0 68%);
+      }
 
       h1 {
         color: rgb(255, 255, 255);
@@ -49,6 +68,30 @@ body {
       z-index: 0;
       h1 {
         color: rgba(165, 30, 0, 0.95);
+      }
+    }
+
+    .header_inside {
+      clip-path: polygon(0 0, 100% 0, 100% 30%, 0 79%);
+      background-color: rgba(49, 47, 47, 0.95);
+      position: absolute;
+      z-index: -10;
+      content: "";
+      width: inherit;
+      height: inherit;
+      top: 16px;
+
+      @include max-width(1900px) {
+        clip-path: polygon(0 0, 100% 0, 100% 35%, 0 76%);
+      }
+      @include max-width(1028px) {
+        clip-path: polygon(0 0, 100% 0, 100% 39%, 0 68%);
+      }
+      @include max-width(1439px) {
+        clip-path: polygon(0 0, 100% 0, 100% 39%, 0 68%);
+      }
+      @include max-width(769px) {
+        clip-path: polygon(0 0, 100% 0, 100% 39%, 0 68%);
       }
     }
   }
@@ -62,6 +105,8 @@ body {
   main {
     width: 1024px;
     min-height: 100vh;
+    padding: 0 1.5rem;
+    box-sizing: border-box;
     h2 {
       font-size: 2.5rem;
       font-weight: bold;
@@ -91,18 +136,20 @@ body {
     }
   }
 
+  $size_icon: 2rem;
+
   .social_icon--content {
     position: fixed;
-    bottom: 2rem;
+    bottom: 0;
     left: 2rem;
     @include flex(row, wrap, center, center);
 
     a {
-      @include size(2.5rem, 2.5rem);
+      @include size($size_icon, $size_icon);
       margin: 0 1rem;
       @include circle();
       @include flex(row, wrap, center, center);
-      background-size: 2.5rem;
+      background-size: $size_icon;
       filter: drop-shadow(3px 4px 2px rgb(129, 129, 129));
 
       content: "";
@@ -216,22 +263,12 @@ body {
     }
   }
 
-  .header_inside {
-    clip-path: polygon(0 0, 100% 0, 100% 28%, 0 81%);
-    background-color: rgba(49, 47, 47, 0.95);
-    position: absolute;
-    z-index: -10;
-    content: "";
-    width: inherit;
-    height: inherit;
-    top: 16px;
-  }
-
   .features_content {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     align-items: flex-start;
+    padding-bottom: 5rem;
     ul {
       width: 40%;
       margin: 1rem 0;

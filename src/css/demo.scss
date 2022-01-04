@@ -151,13 +151,16 @@ body {
       @include flex(row, wrap, center, center);
       background-size: $size_icon;
       filter: drop-shadow(3px 4px 2px rgb(129, 129, 129));
-
+      pointer-events: all;
+      cursor: pointer;
       content: "";
       background-repeat: no-repeat;
       background-position: center;
       transition: $softTransition;
       &:hover {
         transform: scale(1.2);
+        pointer-events: all;
+        cursor: pointer;
       }
       &:nth-child(1) {
         background-image: url("./../assets/icon/linkedin.png");
@@ -253,7 +256,7 @@ body {
       position: absolute;
       @include size(100%, 100%);
       top: 0rem;
-      animation: rotateText 10s linear infinite;
+      animation: rotateText 15s linear infinite;
       & span {
         position: absolute;
         left: 50%;

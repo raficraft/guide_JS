@@ -184,6 +184,12 @@ body {
     }
   }
 
+  .badge_codacy {
+    position: fixed;
+    bottom: 1.875rem;
+    right: 2rem;
+  }
+
   section {
     margin: 2rem 0;
     display: flex;
@@ -278,6 +284,11 @@ body {
       margin: 1rem 0;
       list-style: disc;
     }
+  }
+
+  .grey_text {
+    color: rgb(180, 180, 180);
+    font-style: italic;
   }
 
   @keyframes rotateText {
